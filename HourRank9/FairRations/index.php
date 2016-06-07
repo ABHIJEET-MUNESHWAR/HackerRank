@@ -9,20 +9,22 @@
 
 fscanf(STDIN, "%d", $t);
 $a_temp = rtrim(fgets(STDIN), "\n\r");
-$a = explode(" ",$a_temp);
-array_walk($a,'intval');
+$a = explode(" ", $a_temp);
+array_walk($a, 'intval');
 $len = count($a);
-$numberOfOdds = 0;
-for($i=0; $i<$len; $i++) {
-    if($a[$i]%2) {
-        $numberOfOdds++;
+$cost = 0;
+for ($i = 0; $i < $len; $i++) {
+    if ($a[$i] % 2) {
+        if ($i === $len - 1) {
+            echo "NO" . PHP_EOL;
+            exit;
+        } else {
+            $a[$i]++;
+            $a[$i + 1]++;
+            $cost += 2;
+        }
     }
 }
-
-if($numberOfOdds === 1) {
-    echo "NO" . PHP_EOL;
-} else {
-    echo ($numberOfOdds*2) .PHP_EOL;
-}
+echo $cost . PHP_EOL;
 
 ?>
