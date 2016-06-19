@@ -6,7 +6,7 @@
  * Time: 11:36 PM
  * https://www.hackerrank.com/challenges/angry-professor
  *
- * Array input: array_map('intval', explode(' ', fgets(STDIN)));
+ * Array input: array_map('intval', explode(' ', trim(fgets(STDIN))));
  */
 
 $handle = fopen("php://stdin","r");
