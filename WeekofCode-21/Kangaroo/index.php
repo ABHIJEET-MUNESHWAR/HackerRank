@@ -12,7 +12,7 @@ $v1 = 0;
 $x2 = 0;
 $v2 = 0;
 fscanf(STDIN, "%d %d %d %d", $x1, $v1, $x2, $v2);
-if ($v1 < $v2) {
+if ($v1 <= $v2) {
     echo "NO" . PHP_EOL;
 } else {
     $multiplier = intval(($x2 - $x1) / ($v1 - $v2));
