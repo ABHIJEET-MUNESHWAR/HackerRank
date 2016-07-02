@@ -33,9 +33,11 @@ $ub = 0;
 $sum = 0;
 fscanf(STDIN, "%d %d", $lb, $ub);
 $sum = 0;
+
 for ($i = $lb; $i <= $ub; $i++) {
     $sum += findCombinations($i, $arr);
 }
+
 echo $sum . PHP_EOL;
 
 ?>
