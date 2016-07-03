@@ -28,7 +28,6 @@ function findCombinations($sum, $arr)
     if ($len === 0) {
         return 0;
     }
-    $sum = $sum % $mod;
     $dp = array_fill(0, $sum + 1, 0);
     $dp[0] = 1;
     for ($i = 0; $i < $len; $i++) {

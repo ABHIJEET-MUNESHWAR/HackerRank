@@ -22,7 +22,6 @@ int main() {
     if (len == 0) {
         return 0;
     }
-    ub = ub % mod;
     LL dp[ub+1];
     memset(dp, 0, sizeof(dp));
     dp[0] = 1;
