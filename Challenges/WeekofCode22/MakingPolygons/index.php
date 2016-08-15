@@ -10,12 +10,22 @@
 fscanf(STDIN, "%d", $len);
 $arr = array_map('intval', explode(" ", trim(fgets(STDIN))));
 $addition = array_sum($arr);
-$divisionision = intval($addition / 2);
+$division = intval($addition / 2);
 $count = 0;
-for ($i = 0; $i < $len; $i++) {
-    if ($arr[$i] >= $divisionision) {
-        $count++;
+if ($len === 1) {
+    echo "2";
+} elseif (($len === 2) && ($arr[0] === $arr[1])) {
+    echo "2";
+} elseif (($len === 2) && ($arr[0] !== $arr[1])) {
+    echo "1";
+} else {
+    $max = max($arr);
+    $rem = array_sum($arr) - $max;
+    if ($max >= $rem) {
+        echo 1;
+    } else {
+        echo 0;
     }
 }
-echo $count . PHP_EOL;
+echo PHP_EOL;
 ?>
