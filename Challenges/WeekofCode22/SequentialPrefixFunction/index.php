@@ -58,5 +58,4 @@ while ($t--) {
     }
     echo PHP_EOL;
 }
-
 ?>
